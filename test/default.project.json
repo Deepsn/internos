@@ -1,0 +1,31 @@
+{
+	"name": "internos-test",
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"rbxts_include": {
+				"$path": "include",
+				"node_modules": {
+					"$className": "Folder",
+					"@rbxts": {
+						"$path": "../node_modules/@rbxts"
+					}
+				}
+			},
+			"internos-test": {
+				"$path": "out/src"
+			}
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"client": {
+					"$path": "out/test/src/client"
+				}
+			}
+		}
+	}
+}
