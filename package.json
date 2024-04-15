@@ -1,32 +1,35 @@
 {
-  "name": "@rbxts/internos",
-  "version": "1.0.0",
-  "description": "",
-  "main": "out/init.lua",
-  "scripts": {
-    "build": "rbxtsc",
-    "watch": "rbxtsc -w",
-    "prepublishOnly": "npm run build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "types": "out/index.d.ts",
-  "files": [
-    "out",
-    "!**/*.tsbuildinfo"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.6.4",
-    "@rbxts/compiler-types": "^2.3.0-types.0",
-    "@rbxts/types": "^1.0.767",
-    "roblox-ts": "^2.3.0",
-    "typescript": "^5.4.4"
-  },
-  "trustedDependencies": [
-    "@biomejs/biome"
-  ]
+	"name": "@rbxts/internos",
+	"version": "0.0.1",
+	"description": "",
+	"main": "out/init.lua",
+	"scripts": {
+		"build": "rbxtsc --verbose",
+		"build:test": "rbxtsc -i test/include --verbose --type=game -p=test",
+		"watch:test": "rbxtsc -w -i test/include --type=game -p=test",
+		"serve:test": "rojo serve test/default.project.json",
+		"lint": "biome format ./src",
+		"lint:fix": "biome format ./src --write",
+		"prepublishOnly": "bun run build",
+		"pack": "npm pack"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"types": "out/index.d.ts",
+	"files": ["out", "!**/*.tsbuildinfo"],
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.4",
+		"@rbxts/compiler-types": "^2.3.0-types.0",
+		"@rbxts/types": "^1.0.767",
+		"roblox-ts": "^2.3.0",
+		"typescript": "^5.4.4"
+	},
+	"trustedDependencies": ["@biomejs/biome"],
+	"dependencies": {
+		"@rbxts/iris": "^2.2.0-ts.0"
+	}
 }
