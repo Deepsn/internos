@@ -1,5 +1,8 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "files.eol": "\n",
-  "editor.defaultFormatter": "biomejs.biome"
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"files.eol": "\n",
+	"editor.defaultFormatter": "biomejs.biome",
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }
